@@ -1,4 +1,4 @@
-package com.andrewwish.b2c.sale.model;
+package com.andrewwish.b2c.sale.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

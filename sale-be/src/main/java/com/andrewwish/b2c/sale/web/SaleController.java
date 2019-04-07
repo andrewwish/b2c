@@ -1,6 +1,6 @@
 package com.andrewwish.b2c.sale.web;
 
-import com.andrewwish.b2c.sale.model.SaleEntity;
+import com.andrewwish.b2c.sale.domain.SaleEntity;
 import com.andrewwish.b2c.sale.service.SaleService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

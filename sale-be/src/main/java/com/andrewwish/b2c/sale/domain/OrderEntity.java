@@ -1,6 +1,6 @@
-package com.andrewwish.b2c.sale.model;
+package com.andrewwish.b2c.sale.domain;
 
-import com.andrewwish.b2c.sale.dto.OrderStatus;
+import com.andrewwish.b2c.sale.api.OrderStatus;
 import lombok.Getter;
 
 import javax.persistence.*;

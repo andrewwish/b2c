@@ -1,4 +1,4 @@
-package com.andrewwish.b2c.sale.dto;
+package com.andrewwish.b2c.sale.api;
 
 import lombok.Builder;
 import lombok.Data;

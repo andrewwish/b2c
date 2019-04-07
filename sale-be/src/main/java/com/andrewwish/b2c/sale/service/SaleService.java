@@ -1,7 +1,7 @@
 package com.andrewwish.b2c.sale.service;
 
-import com.andrewwish.b2c.sale.model.SaleEntity;
-import com.andrewwish.b2c.sale.model.SaleRepository;
+import com.andrewwish.b2c.sale.domain.SaleEntity;
+import com.andrewwish.b2c.sale.domain.SaleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
