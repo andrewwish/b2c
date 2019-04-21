@@ -1,5 +1,6 @@
 package com.andrewwish.b2c.sale.service;
 
+import com.andrewwish.b2c.sale.api.MessageSaleCreated;
 import com.andrewwish.b2c.sale.domain.SaleEntity;
 import com.andrewwish.b2c.sale.domain.SaleRepository;
 import lombok.AllArgsConstructor;
@@ -12,13 +13,15 @@ import org.springframework.transaction.annotation.Transactional;
 public class SaleService {
 
     private SaleRepository saleRepository;
-
+    private MessagePublisher messagePublisher;
 
     public SaleEntity getSale(long id) {
         return saleRepository.findById(id).orElse(null);
     }
 
     public SaleEntity postSale(SaleEntity sale) {
-        return saleRepository.save(sale);
+        SaleEntity savedSale = saleRepository.save(sale);
+        messagePublisher.publishMessage(new MessageSaleCreated(sale));
+        return savedSale;
     }
 }

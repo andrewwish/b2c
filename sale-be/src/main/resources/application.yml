@@ -20,3 +20,8 @@ spring:
       path: /console
       settings:
         web-allow-others: true
+  kafka:
+    producer:
+      bootstrap-servers: 84.201.133.148:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer

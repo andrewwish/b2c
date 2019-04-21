@@ -15,6 +15,8 @@ public class SaleEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    private String version = "version_number";
+
     @Column(name = "sale_number")
     private String number;
 
