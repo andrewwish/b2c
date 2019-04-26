@@ -13,11 +13,11 @@ public class CustomerController {
 
     @GetMapping("/api/v1/customers/{id}")
     public CustomerEntity getCustomer(@PathVariable Long id) {
-        return customerService.getCustomer(id);
+        return customerService.getById(id);
     }
 
     @PostMapping("/api/v1/customers")
     public CustomerEntity postCustomer(@RequestBody CustomerEntity customer) {
-        return customerService.createCustomer(customer);
+        return customerService.create(customer);
     }
 }

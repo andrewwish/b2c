@@ -14,11 +14,11 @@ public class CustomerService {
 
     private CustomerRepository customerRepository;
 
-    public CustomerEntity createCustomer(CustomerEntity customer) {
+    public CustomerEntity create(CustomerEntity customer) {
         return customerRepository.save(customer);
     }
 
-    public CustomerEntity getCustomer(long id) {
+    public CustomerEntity getById(long id) {
         return customerRepository.findById(id).orElse(null);
     }
 }

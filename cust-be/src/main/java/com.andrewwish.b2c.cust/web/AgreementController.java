@@ -13,11 +13,11 @@ public class AgreementController {
 
     @GetMapping("/api/v1/agreements/{id}")
     public AgreementEntity getAgreement(@PathVariable long id) {
-        return agreementService.getAgreement(id);
+        return agreementService.getById(id);
     }
 
     @PostMapping("/api/v1/agreements")
     public AgreementEntity postAgreement(@RequestBody AgreementEntity agreement) {
-        return agreementService.createAgreement(agreement);
+        return agreementService.save(agreement);
     }
 }

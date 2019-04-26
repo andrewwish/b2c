@@ -13,11 +13,11 @@ public class SaleController {
 
     @GetMapping("/sale-api/v1/sales/{saleId}")
     public SaleEntity getSale(@PathVariable long saleId) {
-        return saleService.getSale(saleId);
+        return saleService.getById(saleId);
     }
 
     @PostMapping("/sale-api/v1/sales")
     public SaleEntity postSale(@RequestBody SaleEntity sale) {
-        return saleService.postSale(sale);
+        return saleService.save(sale);
     }
 }
