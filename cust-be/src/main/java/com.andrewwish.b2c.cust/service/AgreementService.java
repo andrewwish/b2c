@@ -11,11 +11,11 @@ public class AgreementService {
 
     private AgreementRepository agreementRepository;
 
-    public AgreementEntity getAgreement(long id) {
+    public AgreementEntity getById(long id) {
         return agreementRepository.findById(id).orElse(null);
     }
 
-    public AgreementEntity createAgreement(AgreementEntity agreement) {
+    public AgreementEntity save(AgreementEntity agreement) {
         return agreementRepository.save(agreement);
     }
 }

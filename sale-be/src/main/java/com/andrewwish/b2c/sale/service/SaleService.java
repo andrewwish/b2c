@@ -15,11 +15,11 @@ public class SaleService {
     private SaleRepository saleRepository;
     private MessagePublisher messagePublisher;
 
-    public SaleEntity getSale(long id) {
+    public SaleEntity getById(long id) {
         return saleRepository.findById(id).orElse(null);
     }
 
-    public SaleEntity postSale(SaleEntity sale) {
+    public SaleEntity save(SaleEntity sale) {
         SaleEntity savedSale = saleRepository.save(sale);
         messagePublisher.publishMessage(new MessageSaleCreated(sale));
         return savedSale;
